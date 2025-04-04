@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <div class="wiki-home-content">
+        {{ .Content }}
+        
+        {{ partial "featured-articles.html" . }}
+        
+        {{ partial "recent-updates.html" . }}
+    </div>
+{{ end }}

@@ -1,0 +1,10 @@
+<ul class="wiki-namespaces-list">
+    <li class="selected"><a href="#">Article</a></li>
+    <li><a href="#">Talk</a></li>
+</ul>
+<ul class="wiki-variants">
+    <li class="selected"><a href="#">Read</a></li>
+    {{ with .Site.Params.github }}<li><a href="{{ . }}">Edit</a></li>{{ end }}
+    {{ with .Site.Params.github }}<li><a href="{{ . }}"></a></li>{{ end }}
+    {{ with .Site.Params.github }}<li><a href="{{ . }}">View History</a></li>{{ end }}
+</ul>

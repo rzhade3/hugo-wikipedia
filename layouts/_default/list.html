@@ -1,0 +1,11 @@
+{{ define "main" }}
+    {{ .Content }}
+    <div class="wiki-category-pages">
+        <h2>Pages in {{ .Title }}</h2>
+        <ul>
+        {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+    </div>
+{{ end }}

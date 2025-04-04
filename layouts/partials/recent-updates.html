@@ -1,0 +1,31 @@
+<div class="wiki-recent-updates">
+    <h2>Recent Updates</h2>
+    <ul class="wiki-recent-list">
+        {{ range first 10 (sort .Site.RegularPages.ByLastmod.Reverse) }}
+            <li>
+                <span class="wiki-update-date">{{ .Lastmod.Format "January 2, 2006" }}:</span>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ with .Params.update_description }}
+                    <span class="wiki-update-note">{{ . }}</span>
+                {{ end }}
+            </li>
+        {{ else }}
+            <!-- If no pages are found, show sample content -->
+            <li>
+                <span class="wiki-update-date">January 15, 2023</span>
+                <a href="#">Article X</a>
+                <span class="wiki-update-note">Updated content and references</span>
+            </li>
+            <li>
+                <span class="wiki-update-date">January 10, 2023</span>
+                <a href="#">New article Y</a>
+                <span class="wiki-update-note">Added new article</span>
+            </li>
+            <li>
+                <span class="wiki-update-date">January 5, 2023</span>
+                <a href="#">Article Z</a>
+                <span class="wiki-update-note">Fixed formatting issues</span>
+            </li>
+        {{ end }}
+    </ul>
+</div>

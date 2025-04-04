@@ -1,0 +1,6 @@
+{{ if and (gt .WordCount 400 ) (.TableOfContents) }}
+<div class="wiki-toc">
+    <div class="wiki-toc-title">Contents</div>
+    {{ .TableOfContents }}
+</div>
+{{ end }}

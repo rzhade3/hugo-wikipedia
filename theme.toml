@@ -1,0 +1,12 @@
+name = "Hugo Wikipedia"
+license = "MIT"
+licenselink = "https://github.com/yourusername/hugo-wikipedia/blob/master/LICENSE"
+description = "A Wikipedia-inspired theme for Hugo"
+homepage = "https://github.com/yourusername/hugo-wikipedia"
+tags = ["wiki", "encyclopedia", "knowledge base", "documentation", "responsive"]
+features = ["responsive", "wiki-style", "table of contents", "categories", "mobile-friendly"]
+min_version = "0.41.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://yourwebsite.com"

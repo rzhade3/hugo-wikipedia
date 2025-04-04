@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/wiki.css" | relURL }}">
+    {{ with .Site.Params.favicon }}<link rel="icon" href="{{ . | relURL }}">{{ end }}
+    {{ hugo.Generator }}
+    {{ partial "head.html" . }}
+</head>
+<body>
+    <div class="wiki-page">
+        <div class="wiki-sidebar">
+            {{ partial "sidebar.html" . }}
+        </div>
+        
+        <div class="wiki-main">
+            <div class="wiki-header">
+                <div class="wiki-header-container">
+                    <div class="wiki-personal-tools">
+                        {{ partial "personal-tools.html" . }}
+                    </div>
+                    
+                    <div class="wiki-namespaces">
+                        {{ partial "namespaces.html" . }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wiki-content">
+                <div class="wiki-article">
+                    <h1 class="wiki-firstHeading">{{ .Title }}</h1>
+                    
+                    <div class="wiki-bodyContent">
+                        {{ block "main" . }}{{ end }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wiki-footer">
+                {{ partial "footer.html" . }}
+            </div>
+        </div>
+    </div>
+    
+    {{ partial "scripts.html" . }}
+</body>
+</html>

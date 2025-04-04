@@ -1,0 +1,22 @@
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		// Toggle mobile menu
+		const menuToggle = document.createElement('button');
+		menuToggle.className = 'wiki-menu-toggle';
+		menuToggle.innerHTML = '☰';
+		document.querySelector('.wiki-header-container').prepend(menuToggle);
+		
+		menuToggle.addEventListener('click', function() {
+			document.querySelector('.wiki-sidebar').classList.toggle('wiki-sidebar-active');
+		});
+		
+		// Make TOC collapsible
+		const tocTitle = document.querySelector('.wiki-toc-title');
+		if (tocTitle) {
+			tocTitle.addEventListener('click', function() {
+				this.parentNode.classList.toggle('wiki-toc-collapsed');
+			});
+		}
+	});
+	</script>
+	

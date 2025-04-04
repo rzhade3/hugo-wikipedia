@@ -1,0 +1,26 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "My Wiki"
+theme = "hugo-wikipedia"
+
+[params]
+  description = "A knowledge base built with Hugo and the Wikipedia theme"
+  favicon = "favicon.ico"
+  license = "Creative Commons Attribution-ShareAlike License"
+  license_url = "https://creativecommons.org/licenses/by-sa/4.0/"
+  # logo = "images/logo.png"  # Uncomment to use a custom logo
+  github = "https://github.com/yourusername/your-wiki"  # Link to your GitHub repo
+
+[menu]
+  [[menu.main]]
+    name = "Getting Started"
+    url = "/getting-started/"
+    weight = 1
+  [[menu.main]]
+    name = "Documentation"
+    url = "/docs/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3

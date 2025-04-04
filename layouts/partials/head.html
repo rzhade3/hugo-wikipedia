@@ -1,0 +1,6 @@
+<!-- Additional head elements can be added here in config -->
+{{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/schema.html" . }}

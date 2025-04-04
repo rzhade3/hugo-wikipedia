@@ -1,0 +1,4 @@
+<ul class="wiki-personal-tools-list">
+    {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">View on GitHub</a></li>{{ end }}
+    <li><a href="{{ "search" | relURL }}">Search</a></li>
+</ul>

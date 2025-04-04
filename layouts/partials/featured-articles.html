@@ -1,0 +1,29 @@
+<div class="wiki-featured-articles">
+    <h2>Featured Articles</h2>
+    <div class="wiki-featured-grid">
+        {{ range first 4 (where .Site.RegularPages "Params.featured" true) }}
+            <div class="wiki-featured-item">
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                {{ with .Description }}
+                    <p>{{ . | truncate 120 }}</p>
+                {{ else }}
+                    <p>{{ .Summary | truncate 120 }}</p>
+                {{ end }}
+            </div>
+        {{ else }}
+            <!-- If no featured pages are found, show sample content -->
+            <div class="wiki-featured-item">
+                <h3><a href="/getting-started/">Getting Started</a></h3>
+                <p>Learn how to use this wiki and understand its core features.</p>
+            </div>
+            <div class="wiki-featured-item">
+                <h3><a href="/documentation/">Documentation</a></h3>
+                <p>Explore the complete documentation for this wiki system.</p>
+            </div>
+            <div class="wiki-featured-item">
+                <h3><a href="/about/">About</a></h3>
+                <p>Learn more about this wiki project and its goals.</p>
+            </div>
+        {{ end }}
+    </div>
+</div>

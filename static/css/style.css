@@ -1,0 +1,12 @@
+/* Additional custom styles can be added here */
+/*
+ * This file is intentionally left mostly empty. 
+ * It's provided as a place for theme users to add 
+ * their own custom styles without modifying the core wiki.css file.
+ */
+
+/* Example of how to override a wiki.css style:
+.wiki-firstHeading {
+    color: #000066;
+}
+*/
